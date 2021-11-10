@@ -1421,6 +1421,7 @@ typedef struct job_descriptor {	/* For submit, allocate, and update requests */
 	time_t deadline;	/* deadline */
 	uint32_t delay_boot;	/* delay boot for desired node state */
 	char *dependency;	/* synchronize job execution with other jobs */
+	uint32_t duration;
 	time_t end_time;	/* time by which job must complete, used for
 				 * job update only now, possible deadline
 				 * scheduling in the future */
