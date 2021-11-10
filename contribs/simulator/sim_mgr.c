@@ -39,7 +39,8 @@
 //#include "src/unittests_lib/tools.h"
 #include <getopt.h>
 
-#undef DEBUG
+#define DEBUG 1
+//#undef DEBUG
 int sim_mgr_debug_level = 9;
 
 #define sim_mgr_debug(debug_level, ...) \
@@ -121,7 +122,7 @@ char* getPathFromEnvVar(char*);
 int   getArgs(int, char**);
 int   countEnvVars(char** envp);
 uid_t userIdFromName(const char *name, gid_t* gid); /* function to get uid from username*/
-#if 0
+#if 1
 void  displayJobTraceT(job_trace_t* rptr);
 #endif
 
@@ -591,7 +592,7 @@ void generateJob(job_trace_t* jobd, List *job_req_list, int modular_jobid, int *
 	submit_response_msg_t respMsg, *rptr = &respMsg;
 	//int rv, ix, jx;
 
-#if 0
+#if 1
 	displayJobTraceT(jobd);
 #endif
 	sim_job_msg_t req;
@@ -779,7 +780,7 @@ init_trace_info(void *ptr, int op) {
 	return 0;
 }
 
-#if 0
+#if 1
 void displayJobTraceT(job_trace_t* rptr) {
 	if (trace_format > 2)
 		printf(
